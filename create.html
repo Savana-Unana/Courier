@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Courier Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="site-shell create-shell">
+        <header class="topbar panel">
+            <div class="brand-lockup">
+                <span class="brand-mark">C</span>
+                <div>
+                    <p class="brand-eyebrow">Courier</p>
+                    <h1>Create profile</h1>
+                </div>
+            </div>
+
+            <a class="button topbar-link" href="./info.html">Back to demo</a>
+        </header>
+
+        <section class="create-layout">
+            <section class="panel create-card">
+                <header class="card-header">
+                    <p class="section-label">Bare minimum</p>
+                    <h2>New person or team</h2>
+                    <p>
+                        This is the minimum Courier creation flow for now. Pick
+                        a type and enter only the details needed to show up in
+                        the demo and future matching feed.
+                    </p>
+                </header>
+
+                <form id="createProfileForm" class="company-form create-form" novalidate>
+                    <label for="profileType">Profile type</label>
+                    <select id="profileType" name="profileType" required>
+                        <option value="Person">Person</option>
+                        <option value="Team">Team</option>
+                    </select>
+
+                    <label for="profileName">Name</label>
+                    <input id="profileName" name="profileName" type="text" placeholder="Ari Kline or Signal House" required>
+
+                    <label for="profileDescription">Short Description</label>
+                    <textarea id="profileDescription" name="profileDescription" rows="4" placeholder="One short summary of who they are and what they do." required></textarea>
+
+                    <label for="profileAbilities">Abilities</label>
+                    <input id="profileAbilities" name="profileAbilities" type="text" placeholder="Original soundtrack, mixing, adaptive audio" required>
+
+                    <label for="profileTimeAbility">Time-Ability</label>
+                    <input id="profileTimeAbility" name="profileTimeAbility" type="text" placeholder="8 hrs / week" required>
+
+                    <label for="profileLocation">Location</label>
+                    <input id="profileLocation" name="profileLocation" type="text" placeholder="Berlin, Germany or Remote" required>
+
+                    <div class="form-actions-row">
+                        <button type="submit">Generate entry</button>
+                        <button id="clearCreateForm" type="button" class="button secondary-btn">Clear</button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="panel preview-card">
+                <div class="panel-block">
+                    <p class="section-label">Result</p>
+                    <h3>Courier-ready entry</h3>
+                    <p class="panel-copy">
+                        This outputs the entry in a shape that can drop into the
+                        current demo JSON with almost no extra cleanup.
+                    </p>
+                </div>
+
+                <p id="createStatus" class="form-feedback" role="status" aria-live="polite"></p>
+                <pre id="createOutput" class="code-output">Fill the form to generate a profile object.</pre>
+            </aside>
+        </section>
+    </main>
+
+    <script src="firebase-config.js"></script>
+    <script type="module" src="create.js"></script>
+</body>
+</html>

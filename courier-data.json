@@ -1,0 +1,116 @@
+{
+  "app": {
+    "name": "Courier",
+    "description": "A two-sided matchmaking product for people, teams, companies, and project opportunities."
+  },
+  "modes": {
+    "talent": {
+      "label": "Talent side",
+      "heroTitle": "People discover teams, projects, and paid work through talent.",
+      "heroText": "Courier helps people profit from their abilities by finding teams, projects, and companies that need exactly what they can contribute.",
+      "deckHeading": "Teams, projects, and opportunities matched to a contributor.",
+      "deckCaption": "People swipe through team and opportunity cards that fit their preferences.",
+      "viewer": {
+        "name": "Mina Sol",
+        "summary": "A multidisciplinary designer looking for remote or hybrid creative teams, paid opportunities, and mission-driven projects where strong product taste matters.",
+        "preferences": ["Remote friendly", "Paid work", "Creative teams", "6+ hrs weekly"],
+        "feedIncludes": ["Teams", "Projects", "Job-style opportunities"]
+      },
+      "flow": [
+        "Swipe left to reject a team, project, or opportunity.",
+        "Swipe right to save something worth pursuing.",
+        "After saving, you can reach out directly.",
+        "If both sides save each other, Courier creates a match."
+      ],
+      "cards": [
+        {
+          "type": "Team",
+          "name": "Signal House",
+          "shortDescription": "A small team building a writing-led mystery game and looking for a designer who can help the world feel intentional and memorable.",
+          "abilities": ["UX systems", "Visual direction", "Interaction design"],
+          "timeAbility": "8 hrs / week",
+          "location": "Toronto, Canada",
+          "openTo": "Design contributors who like mood-heavy game projects",
+          "matchScore": "91%",
+          "palette": ["#f16c3d", "#f3a64f"]
+        },
+        {
+          "type": "Project",
+          "name": "Looking for OST",
+          "shortDescription": "A narrative game project searching for an original soundtrack partner early enough to shape the emotional voice of the world.",
+          "abilities": ["Composer collaboration", "Creative direction", "Worldbuilding"],
+          "timeAbility": "Paid contract",
+          "location": "Remote",
+          "openTo": "People who can shape music direction alongside the team",
+          "matchScore": "95%",
+          "palette": ["#ff7c87", "#a95cff"]
+        },
+        {
+          "type": "Opportunity",
+          "name": "Frontend Partner Wanted",
+          "shortDescription": "A company with backend systems already live needs a frontend collaborator to turn the product into a polished, launchable experience.",
+          "abilities": ["Product design", "UI thinking", "Prototype direction"],
+          "timeAbility": "10 hrs / week",
+          "location": "Chicago, USA",
+          "openTo": "Designers and frontend-minded creatives",
+          "matchScore": "87%",
+          "palette": ["#ffb86b", "#f16c3d"]
+        }
+      ]
+    },
+    "team": {
+      "label": "Team side",
+      "heroTitle": "Teams and companies discover people who can move projects forward.",
+      "heroText": "Courier helps teams, projects, and companies find contributors who want to profit from their talents and who fit the needs of the work.",
+      "deckHeading": "People matched to the needs of a team or company.",
+      "deckCaption": "Teams swipe through contributor profiles that fit what they need right now.",
+      "viewer": {
+        "name": "Noor Studio",
+        "summary": "A small creative company looking for people who can contribute consistently across design, audio, and frontend work on collaborative product efforts.",
+        "preferences": ["US or Europe overlap", "Remote friendly", "Creative talent", "Reliable weekly time"],
+        "feedIncludes": ["People", "Freelancers", "Specialists"]
+      },
+      "flow": [
+        "Swipe left to reject a contributor profile.",
+        "Swipe right to save someone your team wants to pursue.",
+        "Saved profiles can be contacted directly.",
+        "Mutual saves turn the connection into a match."
+      ],
+      "cards": [
+        {
+          "type": "Person",
+          "name": "Ari Kline",
+          "shortDescription": "Composer and sound designer focused on games, interactive storytelling, and emotionally memorable audio systems.",
+          "abilities": ["Original soundtrack", "Adaptive audio", "Mixing"],
+          "timeAbility": "8 hrs / week",
+          "location": "Berlin, Germany",
+          "openTo": "Narrative games, prototypes, and remote teams",
+          "matchScore": "93%",
+          "palette": ["#f16c3d", "#f3a64f"]
+        },
+        {
+          "type": "Person",
+          "name": "Jules Mercer",
+          "shortDescription": "Frontend engineer with strong product taste who likes community tools, dashboard experiences, and small teams with real momentum.",
+          "abilities": ["React", "Motion systems", "Component architecture"],
+          "timeAbility": "12 hrs / week",
+          "location": "Chicago, USA",
+          "openTo": "Teams building creator, music, or community products",
+          "matchScore": "89%",
+          "palette": ["#70b8ff", "#5d6bff"]
+        },
+        {
+          "type": "Person",
+          "name": "Mina Sol",
+          "shortDescription": "Product designer who likes making early-stage tools feel calm, playful, and easy to trust.",
+          "abilities": ["UX systems", "Interaction design", "Figma handoff"],
+          "timeAbility": "6 hrs / week",
+          "location": "Lisbon, Portugal",
+          "openTo": "Mission-driven teams and web product builds",
+          "matchScore": "90%",
+          "palette": ["#ff8d66", "#d64766"]
+        }
+      ]
+    }
+  }
+}

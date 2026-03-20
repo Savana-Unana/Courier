@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="site-shell landing-shell">
+        <header class="topbar panel">
+            <div class="brand-lockup">
+                <span class="brand-mark">C</span>
+                <div>
+                    <p class="brand-eyebrow">Non-profit project</p>
+                    <h1>Courier</h1>
+                </div>
+            </div>
+
+            <div class="mode-switch" aria-label="Marketplace side">
+                <button class="mode-pill is-active" type="button" data-mode="talent">Talent side</button>
+                <button class="mode-pill" type="button" data-mode="team">Team side</button>
+            </div>
+
+            <a class="button topbar-link" href="./create.html">Create profile</a>
+        </header>
+
+        <section class="hero-strip panel">
+            <div class="hero-copy">
+                <p class="section-label">Creative matchmaking</p>
+                <h2 id="heroTitle">People discover teams, projects, and paid work through talent.</h2>
+                <p id="heroText">
+                    Courier is a two-sided matching product. Swipe left to reject,
+                    swipe right to save, and if both sides save each other, they
+                    get matched and can talk directly.
+                </p>
+            </div>
+
+            <aside class="hero-note">
+                <p class="section-label">How matching works</p>
+                <ul id="heroRules"></ul>
+            </aside>
+        </section>
+
+        <section class="workspace-grid">
+            <aside class="context-panel panel">
+                <div class="panel-block">
+                    <p class="section-label">Viewing as</p>
+                    <h3 id="viewerName">Loading...</h3>
+                    <p class="panel-copy" id="viewerSummary"></p>
+                </div>
+
+                <div class="panel-block">
+                    <p class="section-label">Preferences</p>
+                    <div class="chip-row" id="viewerPreferences"></div>
+                </div>
+
+                <div class="panel-block">
+                    <p class="section-label">Feed includes</p>
+                    <div class="chip-row" id="viewerFeed"></div>
+                </div>
+            </aside>
+
+            <section class="deck-column panel">
+                <div class="deck-headline">
+                    <div>
+                        <p class="section-label">Suggested matches</p>
+                        <h3 id="deckHeading">Profiles matched to the current side.</h3>
+                    </div>
+                    <p class="deck-caption" id="deckCaption">JSON-backed demo for later app integration.</p>
+                </div>
+
+                <div class="deck-frame">
+                    <div class="swipe-feedback swipe-feedback-left">Reject</div>
+                    <div class="swipe-feedback swipe-feedback-right">Save</div>
+                    <div class="card-stack" id="previewCardStack" aria-live="polite"></div>
+                    <button class="deck-reset hidden" id="previewResetButton" type="button">Start over</button>
+                </div>
+
+                <div class="controls">
+                    <button class="action action-reject" id="previewRejectButton" type="button">Reject</button>
+                    <button class="action action-save" id="previewSaveButton" type="button">Save</button>
+                </div>
+            </section>
+
+            <aside class="context-panel panel">
+                <div class="panel-block">
+                    <p class="section-label">Flow</p>
+                    <div class="timeline" id="flowSteps"></div>
+                </div>
+
+                <div class="panel-block">
+                    <p class="section-label">Current deck</p>
+                    <div class="stat-grid">
+                        <div class="meta-box">
+                            <span class="card-label">Side</span>
+                            <strong id="currentModeLabel">Talent side</strong>
+                        </div>
+                        <div class="meta-box">
+                            <span class="card-label">Progress</span>
+                            <strong id="deckProgress">Loading...</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-block">
+                    <p class="section-label">Demo scope</p>
+                    <p class="panel-copy">
+                        This demo includes both sides of Courier, uses JSON data,
+                        and shows people, teams, and opportunities as swipeable
+                        cards with the core matching rules.
+                    </p>
+                    <p id="dataStatus" class="form-feedback" role="status" aria-live="polite"></p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <template id="previewCardTemplate">
+        <article class="swipe-card">
+            <div class="card-top">
+                <div class="card-topline">
+                    <span class="card-kind"></span>
+                    <span class="card-location"></span>
+                </div>
+                <div class="card-title-wrap">
+                    <h4 class="card-name"></h4>
+                    <p class="card-short-description"></p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="card-section">
+                    <span class="card-label">Abilities</span>
+                    <ul class="ability-list"></ul>
+                </div>
+
+                <div class="card-meta-grid">
+                    <div class="meta-box">
+                        <span class="card-label">Time-Ability</span>
+                        <strong class="card-time-ability"></strong>
+                    </div>
+                    <div class="meta-box">
+                        <span class="card-label">Match</span>
+                        <strong class="card-match-score"></strong>
+                    </div>
+                </div>
+
+                <div class="card-section">
+                    <span class="card-label">Open To</span>
+                    <p class="card-open-to"></p>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <script src="firebase-config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
